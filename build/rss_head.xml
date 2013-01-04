@@ -1,0 +1,10 @@
+ <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Josh Is a Nerd (dot com)</title>
+    <link>http://www.joshisanerd.com/</link>
+    <description>The personal homepage of Josh Myer.</description>
+    <language>en-us</language>
+    <webMaster>josh @joshisanerd.com (Josh Myer)</webMaster>
+    <managingEditor>josh @joshisanerd.com (Josh Myer)</managingEditor>
+    <ttl>240</ttl>
+

@@ -1,0 +1,130 @@
+#define __PAGE_TITLE Introducing TDIK
+#undef __PAGE_CREAT 
+#undef __PAGE_MOD
+
+#define __P_BLOG
+
+#include <header.html>
+
+<div class="content">
+<h3>Introducing TDIK</h3>
+
+<p><small><i>(obdisclaimer: I don't speak for my employer here, and
+this is my idea, not theirs.)</i></small></p>
+
+<p>
+Quick summary: Applying machine learning to uncover bottlenecks,
+predict system capacity, user growth, hardware purchases, and,
+generally, everything you need to know when running a service-based
+business.  You give it your monitor data, and it gives you a
+diagnostic and predictive model of your system.
+</p>
+
+
+<p>
+Time Data Into Knowledge (TDIK) is an idea I had a little over a year
+ago.  Since I've talked with several people about it in that time,
+it's no longer patentable in the US.  And, since I haven't actually
+done more than a proof of concept, I wanted to make a full public
+disclosure of the idea, in the hopes that it would inspire someone.
+</p>
+
+<p>
+Imagine you have a multi-tier application stack, with fairly complete
+monitors.  So, your frontend server, the message queues, databases,
+and a few backend processes (bulk and on-line).  Additionally, assume
+you've got complete monitors in this stack: the normal machine
+telemetry (CPU usage, disk capacity, network utilization, etc), as
+well as application-specific stuff, like number of users, hits per
+second, message queue depth, etc.
+</p>
+
+<p>
+Traditional monitoring systems give you graphs of all this; you do the
+analysis.  The best you can hope for is a big display of all your
+graphs together, then eyeball them for correlations.  You can shuffle
+them around to make it easier, but it's still human work.  This kind
+of correlation is great for fires, where you have a sudden large shift
+in two variables and don't care about the precise magnitude of the
+relations.  It's no good for a more valuable, big-picture task:
+capacity planning, where the relationships are less pronounced and
+more complicated.
+</p>
+
+<p>
+That's where TDIK comes in.  There are ways to find out how correlated
+two datasets are and then extract models of their relationship.  You
+can expand these out to any number of combinations, though it gets
+much more computationall expensive.  Once you have these models,
+though, they're invaluable.
+</p>
+
+<p>
+You can make a model of your system yourself, using your knowledge of
+it.  Your model will probably be darned good, since you built the
+thing.  I've done these, and not only are they fun, they're handy.
+But there's always dark corners lurking around.  What's the
+performance interaction of running MySQL and Squid on the same host,
+for instance?  They're both memory-intensive, especially when big
+requests are getting bandied about.  Ideally, I'd have separate
+hardware for them, but, well, you know how that goes.
+</p>
+
+<p>
+TDIK, since it's learning the model from scratch every time, will find
+out how things interact on your particular system.  It discovers
+correlations that don't seem straightforward, but make sense after the
+fact.  Things like "Webserver load is highly correlated with the
+number of user profile views in full mode" (you eventually discover
+that someone accidentally left in the debug code that disables
+template caching there).
+</p>
+
+
+<p>
+TDIK's models are useful for more than troubleshooting, though.  You
+can also use them for planning.  For instance, let's say your website
+has N concurrent users.  Would you like to know how many users the
+current system can support?  The model can tell you how many, and
+which component will be your bottleneck.  Or, perhaps you know that
+you want to be able to support some number of users.  The model could
+tell you how much you'd need to scale each component in your current
+system to get there.
+</p>
+
+<p>
+What about firefighting?  Your model reflects the steady-state
+performance of the overall system.  If you have the last few minutes
+of monitor data, you can quickly re-correlate and see which components
+don't fit the model.  In fact, you can see <em>exactly how much</em>
+they don't fit the model, and prioritize the order in which your team
+checks things out.
+</p>
+
+<p>
+But why firefight in the first place?  Using that same correlation,
+you can get alerts when the current state deviates appreciably from
+the model.  One things I've always said about nagios alerts is that
+"They're only as good as your experience and creativity."  If you
+don't know that a failure mode is waiting, you're not going to have a
+nagios alert prepared for it.  TDIK's model obviates that, since it
+knows your system intimately.  It will notice the increase in CPU time
+versus page hits even if the raw number of hits is low (say, at
+midnight), letting you identify and avert the morning meltdown.
+</p>
+
+<p>
+"So where do I download or buy this product, or pay for the service?" 
+you ask.  Well, it's mostly still vapor.  I did a small
+proof-of-concept, and found that modelling this many variables is
+noisy.  And, honestly, I haven't had time to make this happen.  It
+could probably be a startup, but I'm not certain of it yet.  Feel free
+to drop me an email at <a
+href="mailto:josh@joshisanerd.com">josh@joshisanerd.com</a> if you
+feel otherwise.
+</p>
+
+</div> <!-- content -->
+
+
+#include <footer.html>

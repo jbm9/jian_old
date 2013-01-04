@@ -1,0 +1,42 @@
+#define __MEDIA_TITLE The Craft of Functional Programming
+#define __MEDIA_SUBTITLE
+#define __MEDIA_AUTHOR Simon Thompson
+#define __MEDIA_ISBN 0201342758
+#define __MEDIA_TN img/__MEDIA_ISBN.jpg
+#define __MEDIA_TN_W 124
+#define __MEDIA_TN_H 160
+
+#define __PAGE_TITLE Media Log -- __MEDIA_TITLE
+
+#define __MEDIA_PURCHASED December, 2007
+#define __MEDIA_READNOTES 
+
+
+#include <header.html>
+
+      <div class="content">
+
+#include <med_header.html>
+
+<h3>Overall Impression</h3>
+
+<p>
+
+This is a really, really great introduction to both functional
+programming in general, and the Haskell language in particular.  I
+would like to note, though, that it focuses on the HUGS implementation
+of Haskell, instead of GHC.  That's not a big deal, but it seems that
+GHC is generally preferred by the community.
+
+</p>
+
+<h3>Related Material</H3>
+<ul>
+<li>__REF(quicksilver, Quicksilver), the first book in the series.</li>
+<li>__REF(king_of_the_vagabonds, King of the Vagabonds), the second book in the series.</li>
+<li>__REF(the_confusion, The Confusion), the second volume (books 4-6) in the Baroque Cycle.</li>
+</ul>
+
+	</div> <!-- content -->
+
+#include <footer.html>

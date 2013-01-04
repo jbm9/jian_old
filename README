@@ -1,9 +1,15 @@
-.skel
-=====
+jian_old
+========
 
-This is a skeleton project.  It needs better documentation.
+This is the old joshisanerd.com homepage generator.
 
-Contents:
+It's a bit messy, but it's also delightful to skim
+through and see how I solved things once upon a time.
 
-web/ -- An empty website for this thing
-code/ -- An empty directory for code for this thing
+I'd recommend against using this for anything, but, hey,
+that's up to you.  Just please don't use my stylesheet
+verbatim.  I like to think of the style here as a personal
+trademark of a sort.
+
+-jbm 20130103
+

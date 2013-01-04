@@ -1,0 +1,83 @@
+#define __REF(PAGE, TITLE) <i><a href="PAGE.html">TITLE</A></i>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <base href="http://www.joshisanerd.com/" />
+    <!-- <base href="file:///home/jbm/Documents/Sites/homepage/" /> -->
+    <title>__PAGE_TITLE (joshisanerd.com)</title>
+    <link rel="stylesheet" type="text/css" href="/jian0602.css" />
+
+#ifdef __P_BLOG
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.joshisanerd.com/log/index.xml" />
+#endif
+
+#ifdef __PAGE_DESCRIPTION
+    <meta name="Description" content="
+__PAGE_DESCRIPTION
+"/>
+#endif
+  </head>
+
+  <body>
+
+    <div class="body">
+
+      <div class="sidebar">
+	  <b>Local</b>
+	<ul>
+#ifdef __P_INDEX
+	    <li><b>Home</b></li>
+#else
+	  <li> <a href="/index.html">Home</a></li>
+#endif
+
+#ifdef __P_PROJECTS
+	      <li><b>Projects</b>
+	      <ul>
+		<li> <a href="/projects.html#publications">Publications</a></li>
+		<li> <a href="/projects.html#art">Art</a></li>
+		<li> <a href="/projects.html#software">Software</a></li>
+	      </ul>
+           </li>
+
+#else
+	  <li> <a href="/projects.html">Projects</a></li>
+#endif
+
+#if 0
+#ifdef __P_LINKS
+	      <li><b>Links</b></li>
+#else
+	  <li> <a href="/links.html">Links</a></li>
+#endif
+#endif
+
+#ifdef __P_RESUME
+	      <li> <b>Resume</b></li>
+#else
+	    <li> <a href="/resume.pdf">Resume</a></li>
+#endif
+
+#ifdef __P_BLOG
+	      <li> <b>Blog</b></li>
+#else
+	    <li> <a href="/log/">Blog</a></li>
+#endif
+
+
+	</ul>
+	  <b>External</b>
+	<ul>
+	  <li> <a href="http://blog.appliedplatonics.com/">Technical Blog</a></li>
+	  <li> <a href="http://del.icio.us/jbm">del.icio.us links</a></li>
+	  <li> <a href="http://www.facebook.com/people/Josh-Myer/547534740">Facebook</a></li>
+	  <li> <a href="http://twitter.com/xek">Twitter</a> (locked)</li>
+	</ul>
+
+
+	  <div class="sidebarlogo">
+	  <img id="sidebarlogo_img" src="/newlogo_threshold.gif" width="188" height="250" alt="logo" />
+	  </div>
+ 
+      </div> <!-- sidebar -->

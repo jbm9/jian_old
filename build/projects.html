@@ -1,0 +1,139 @@
+#define __PAGE_TITLE Projects
+#undef __PAGE_CREAT 
+#undef __PAGE_MOD
+
+#undef __P_INDEX 
+#define __P_PROJECTS
+#undef __P_LINKS
+#undef __P_RESUME
+
+#include <header.html>
+
+      <div class="content">
+
+<a name="publications"><h2>Publications</h2></a>
+
+<h3>Hacking Knoppix</h3>
+
+<P>I wrote chapter 7, "Clustering for Knoppix," for Wiley's <i><a
+href="http://www.amazon.com/gp/product/0764597841/">Hacking
+Knoppix</a></i>.  It was published in early 2006.</p>
+
+
+<h3>The Art of Computer Programming Reading Group</h3>
+
+<p>I started a reading group to cover Knuth's <i>The Art of Computer
+Programming</i> in a year.  That's about 1500 dense pages on theoretical
+computer science in forty-something weeks.  The writeup and schedule are
+available at the <a href="http://www.ibiblio.org/taocprg/">TAoCP RG Homepage</a>.</p>
+
+<p>Not surprisingly, after a very short period of time, this fell to the wayside.  The page and schedule are left up for anyone who has interest in their own push through TAoCP.</p>
+
+
+<a name="art"><H2>Art</H2></a>
+
+<a name="muralizer"><H3>Muralizer</H3></a>
+
+<P>Muralizer is a drawbot in the vein of <a
+href="http://www.hektor.ch/">Hektor</a>.  It can be thought of as a
+plotter, but one that draws on walls instead of sheets of paper in a
+bed.  Muralizer will allow anyone to take a vector graphics file (such
+as those produced by Adobe Illustrator or Inkscape) and turn it into a
+mural.  This project involves XML parsing (SVG), slightly crazy math
+(converting x-y cubic bézier curves into stepper motor controls),
+microcontroller code, and physical design.  More details forthcoming
+as the project gels further.</P>
+
+<a name="perceptron"><H3>Perceptron</H3></a>
+
+<P>Perceptron is an interactive dancefloor project headed by Jean
+Rintoul.  Using an array of ultrasonic sensors and video capture with
+computer vision, music and visuals are generated.  Perceptron was
+first shown at <a
+href="http://false-profit.com/2009/04/25/alchemy/">False Profit's
+Alchemy</a>, and is currently being refined based on the lessons
+learned from that showing. (<a
+href="http://perceptronproject.com/">Perceptron homepage</a>)</P>
+
+
+<a name="software"><H2>Software</H2></a>
+
+<a name="libpuz"><H3>libpuz</H3></a>
+
+<P>PUZ is a file format used to store crossword puzzles.  The format
+uses many different checksums and various magic values; none of this
+was documented.  I spent about a week's worth of time (over the course
+of a month) deducing the checksum routine and then figuring out how
+it's applied to the data.  To finish off, i wrote a library that
+implements the format, for both reading and writing PUZ files.  The
+end result is <a href="http://www.joshisanerd.com/puz/">PUZ File
+Format Specification</a> and <a
+href="http://www.joshisanerd.com/puz/libpuz-latest.tar.gz">libpuz(-latest).tar.gz</a>.</P>
+
+<a name="marginalia"><H3>Marginalia</H3></a>
+
+<P>Marginalia was a firefox plugin which allowed you to add marginalia
+(notes in the margin) to webpages.  It let you add these notes to a
+given position in a given paragraph of a webpage.  I wrote this while
+at <a href="http://www.ibiblio.org/">ibiblio</a>, but it never really
+took off outside myself.  Since then, other people have done the same
+thing (some believing there's a business model to be found), but it's
+hard to keep track of which projects are still around, so I won't even
+try.  (<a href="http://www.joshisanerd.com/marginalia/">Marginalia
+homepage</a>)</P>
+
+
+<a name="dragon"><H3>Dragon Character Trainer</H3></a>
+
+<P>This isn't really &quot;my&quot; project, per-se, but it's
+something I was heavily involved in.  dragon-char is a Chinese
+character (Hanzi) training program for the Palm.  You can find more
+information about it at the <a
+href="http://dragon-char.sourceforge.net/">Dragon Character
+Homepage</a>. </P>
+
+<a name="hebci"><H3>HEBCI</H3></a>
+
+<P>HEBCI is a technique that allows a web form handler to
+transparently detect the character set its data was encoded with.  A
+complete writeup can be had at the <a
+"href="http://www.joshisanerd.com/set/">HEBCI Homepage</a>.</P>
+
+<a name="huffman"><H3>Huffman Demo (Haskell)</H3></a>
+
+<P>This is a demo/framework app, written in Haskell.  It's a cheat
+sheet of sorts for me, used to bootstrap new Haskell projects.
+Because it's written in Literate Haskell, its documentation is a PDF.
+You can look at <a
+href="http://www.joshisanerd.com/projects/Huffman.pdf">Huffman
+documentation</a>, or just download <a
+href="http://www.joshisanerd.com/projects/HuffmanDemo-0.0.tar.gz">HuffmanDemo-0.0.tar.gz</a>.</P>
+
+<a name="libedio"><H3>libedio</H3></a>
+
+<P>A general-purpose network IO library with some handy unixy bits.
+Basically, it allows you to quickly write network client code without
+having to deal with all the networking-specific bits (buffering, etc),
+which is really convenient. More information is available at the <a
+href="http://libedio.sourceforge.net/">libedio Homepage</a>.</P>
+
+
+<a name="portmuxer"><H3>PortMuxer</H3></a>
+
+<P>Once upon a time, I worked a crappy job doing crappy work. At this
+job, we didn't have Real Internet Access. We did, however, have access
+to port 80, though it went through a slightly odd proxy. The important
+part is that it didn't mess up stream connections. So, i wrote a
+program that multiplexes a listener port, allowing HTTP, SSH, and
+telnet over the same port.  Quite handy. Still a little rough around
+the edges, but should be coming along nicely when i get the time to
+actually work on it.<BR> <a
+href="projects/portmuxer-latest.tar.gz">Download Latest
+PortMuxer</a>.</P>
+
+
+	  <div class="ph">&nbsp;</div>
+      </div> <!-- content -->
+
+
+#include <footer.html>

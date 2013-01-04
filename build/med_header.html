@@ -1,0 +1,38 @@
+
+<!-- split this out into its own "media header" -->
+#ifdef __MEDIA_TN
+	  <div class="mediatn" style="float: right;">
+<center>
+	    <img src=__MEDIA_TN width=__MEDIA_TN_W height=__MEDIA_TN_H alt="cover image" /><br/>
+	    __MEDIA_TITLE<br/>
+#ifdef __MEDIA_SUBTITLE
+	    __MEDIA_SUBTITLE<br/>
+#endif
+	    __MEDIA_AUTHOR
+</center>
+	  </div>
+#endif
+
+
+<h2><i>__MEDIA_TITLE 
+#ifdef __MEDIA_SUBTITLE
+<small>__MEDIA_SUBTITLE</small>
+#endif
+</i>
+#ifdef __MEDIA_ISBN
+&nbsp; &nbsp; &nbsp; <small><small>ISBN</small> __MEDIA_ISBN</small>
+#endif
+</h2>
+
+<p>Purchased: __MEDIA_PURCHASED<br/>
+__MEDIA_READNOTES
+#ifdef __MEDIA_ISBN
+<br/>
+<br/>
+<a href=http://www.amazon.com/o/ASIN/__MEDIA_ISBN>Amazon: <i>__MEDIA_TITLE</i></a><br/>
+</p>
+#endif
+
+
+
+<!-- split this out into its own "media header" -->
